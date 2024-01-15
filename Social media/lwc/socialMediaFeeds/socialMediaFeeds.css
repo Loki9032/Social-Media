@@ -1,0 +1,21 @@
+.message-style{
+	margin-left: 15px;
+	margin-top: 10px;
+}
+
+.background {
+    background-color: #f0f0f0; 
+    padding: 20px; 
+    /* border-radius: 10px; 
+    box-shadow:0 4px 8px rgba(7, 161, 222, 0.516); */
+}
+
+.slds-scrollable_y {   
+    max-height: 40rem;
+    overflow-y: auto;
+}
+
+.slds-card {   
+     border-radius: 5px;
+    box-shadow:0 8px 8px rgba(7, 161, 222, 0.516);
+}

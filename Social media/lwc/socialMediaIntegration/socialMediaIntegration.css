@@ -1,0 +1,11 @@
+.custom-checkbox{
+	font-weight: bolder;
+	font-size: 15px;	
+}
+
+.background {
+    background-color: #f0f0f0; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(7, 161, 222, 0.516); 
+}

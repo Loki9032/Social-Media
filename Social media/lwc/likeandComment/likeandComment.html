@@ -1,0 +1,44 @@
+<template>
+	<div class="slds-card">
+		<!-- Like and Comments Icons starting -->
+		<div class="slds-grid slds-gutters slds-clearfix">
+			<div class="slds-col ">
+				<div class="slds-float_left">
+					<lightning-icon class='slds-float_left' icon-name='utility:like' alternative-text='like'
+						size='x-medium'></lightning-icon>
+					<p class="c-like-value">{like} </p>
+				</div>
+			</div>
+			<div class="slds-col">
+				<lightning-icon class='slds-float_right' icon-name='utility:comments' alternative-text='comments'
+					size='x-medium' onclick={showComments} ondblclick={closeComment}>
+				</lightning-icon>
+			</div>
+		</div>
+		<!-- Like and Comments Icons ending -->
+
+		<!-- Comments Template starting -->
+		<template if:true={openComments}>
+			<div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium ">
+				<lightning-layout>
+					<lightning-layout-item padding="around-small" class="slds-scrollable_y"
+						style="height:15rem;width:28rem" tabindex="0">
+						<template if:true={comments} for:each={comments} for:item="con" for:index="index">
+							<div class="slds-list_horizontal" key={con.Id}>
+								<lightning-icon variant="base" size="x-large" icon-name="utility:user"
+									alternative-text="User"></lightning-icon>
+								<div class="slds-p-left_medium Background ">
+									<p class="slds-text-color_default slds-m-around_none slds-p-around_none comment" style="font-weight:bold;">
+										commenter Name</p>
+									<p class="slds-text-color_weak  ">{con.comment_Message__c}</p>
+								</div>
+							</div>
+						</template>
+					</lightning-layout-item>
+
+				</lightning-layout>
+			</div>
+		</template>
+		<!-- Comments Template ending -->
+	</div>
+</template>

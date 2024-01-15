@@ -1,0 +1,22 @@
+:host{
+.box {	
+  display: flex;
+  align-items: center;
+  
+}
+
+.like-value{
+	margin-left: 5px;
+	font-size: 15px;
+}
+.c-comment-value{
+	margin-left: 10px;
+	font-size: 13px;
+	margin-top: 5px;
+	background-color: #BEBEBE;
+	padding: 6px;
+	border-radius: 5px;
+}
+
+
+}

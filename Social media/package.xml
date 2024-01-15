@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>FaceBookJsonConverter</members>
+        <members>FacebookWebHook_Handler</members>
+        <members>FacebookWebHook_Handler_Test</members>
+        <members>FacebookWebHook_Service</members>
+        <members>FacebookWebHook_Service_Test</members>
+        <members>SocailMediaFeedsFetch</members>
+        <members>SocailMediaFeedsFetch_Test</members>
+        <members>SocialMediaTextIntegration</members>
+        <members>SocialMediaTextIntegration_Test</members>
+        <members>socialMediaMessageController</members>
+        <members>socialMediaMessageController_Test</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>likeandComment</members>
+        <members>postMessageWithProfile</members>
+        <members>socialMedia</members>
+        <members>socialMediaFeeds</members>
+        <members>socialMediaIntegration</members>
+        <members>socialmediaInstructions</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <version>57.0</version>
+</Package>

@@ -1,0 +1,62 @@
+<template>
+
+	<div class="background">
+		<lightning-card>
+			<div class="slds-p-around_medium">
+
+
+				<div class="slds-form-element">
+					<div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+						<input type="text" onfocus={openModal} placeholder="Share Post" class="slds-input" style="background-color: #f0f0f0;" />
+						<span class="slds-icon_container slds-icon-utility-share slds-input__icon slds-input__icon_right" title="Share">
+							<lightning-icon icon-name="utility:share" size="x-small"></lightning-icon>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			</br>
+
+			<template if:true={modalIsOpen}>
+				<section role="dialog" tabindex="-1" aria-modal="true"
+					aria-label="Meaningful description of the modal content" class="slds-modal slds-fade-in-open">
+					<div class="slds-modal__container">
+
+						<div class="slds-modal__content slds-p-around_medium slds-modal__content_headless"
+							id="modal-content-id-1">
+
+							<lightning-card variant="Narrow" title="Post Messages" icon-name='utility:share_post'>
+
+								<div class="slds-form slds-form_stacked">
+									<div class="slds-form-element">
+										<div class="slds-form-element__control">
+											<lightning-input-rich-text id="messageInput" value={message}
+												onchange={handleMessageChange} placeholder="Enter your Message">
+											</lightning-input-rich-text>
+										</div>
+									</div>
+								</div>
+
+							</lightning-card>
+
+
+						</div>
+						<div class="slds-modal__footer">
+
+							<div class="slds-form-element">
+								<button class="slds-button slds-button_destructive"  onclick={handleCancelClick} aria-label="Cancel and close">Cancel</button>
+								<button class="slds-button slds-button_success"
+									onclick={sendMessageToApex} >
+									SHARE</button>
+
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+
+			</template>
+		</lightning-card>
+
+	</div>
+</template>

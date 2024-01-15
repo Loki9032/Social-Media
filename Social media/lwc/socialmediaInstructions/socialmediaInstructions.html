@@ -1,0 +1,79 @@
+<template>
+	<div class="onboarding-container">
+		<h1>Welcome to our App!</h1>
+		<p>Follow the instructions below to set up your credentials:</p>
+		<strong> Note:</strong> Assign permission Set to the User <b>	Api Access </b>
+		<div class="credentials-section">
+			<h2>LinkedIn Name Credentials:</h2>
+			<ol>
+				<li> <a href="https://developer.linkedin.com/" target="_blank">Visit the LinkedIn Developer portal</a>
+				</li>
+				<li>Create a new Connected App.</li>
+				<li>Obtain the "Client Key and Client Secret" from your LinkedIn App settings and store them in the
+					Authentication provider with necessary Scopes.</li>
+				<li>After saving Authentication provider, copy the callback URL and add it to the LinkedIn developer
+					portal.</li>
+				<li>Go to External Credentials and Configure the Principals.</li>
+			</ol>
+			<div class="cred">
+				<ol>
+					<li>Generate access token with necessary permissions and past Access token in the Custom Label </li>
+					<li> LinkedIn Access Token: <b>Linkedin_accessToken</b> </li>
+				</ol>
+				<img src={linkedin_token} alt="linkedin_token"/>
+                        </div>
+
+			</div>
+
+			<div class="credentials-section">
+				<h2>Facebook Name Credentials:</h2>
+				<ol>
+					<li> <a href="https://developers.facebook.com/" target="_blank">Visit the Facebook Developer
+							portal</a></li>
+					<li>Create a new Connected App.</li>
+					<li>Obtain the "Client Key and Client Secret" from your Facebook App settings and store them
+						in the Authentication provider with necessary Scopes.</li>
+					<li>After saving Authentication provider, copy the callback URL and add it to the Facebook
+						developer portal.</li>
+					<li>Go to External Credentials and Configure the Principals</li>
+					<li>For a webhook subscription, create a site in the Salesforce.</li>
+					<li>Go to Public Access settings and give Apex class Access to the following classes:</li>
+					<ul>
+						<b class='apexAccess'>
+									<li>FaceBookJsonConverter</li>
+									<li>FacebookWebHook_Handler</li>
+									<li>FacebookWebHook_Service</li>
+									<li>socialMediaMessageController</li>
+                                </b>
+					</ul>
+					<li>Use Default URL followed by <b> /webhooks </b> in the webhook subscription and enter the
+						new
+						encryption key and Paste the encryption key in the custom label Facebook_Webhook_Key.
+					</li>
+
+					<div class="cred">
+						Example custom label:
+						<ol>
+							<li> Facebook Webhook Key: <b>Facebook_Webhook_Key</b> </li>
+						</ol>
+						<img src={webhook} alt="Webhook Key"/>
+                            </div>
+
+						<div class="cred">
+							<li>Generate access token using Graphql with necessary permissions and past Facebook
+								page ID and Access token in the custom metadata type </li>
+							Example Metadata Records:
+							<ol>
+								<li> Facebook Page ID: <b>pageId__c</b> </li>
+								<li> Facebook Access Token: <b>accessToken__c</b> </li>
+
+							</ol>
+							<img src={meta_record} alt="Page Id and Access Token"/>
+                            </div>
+				</ol>
+
+			</div>
+
+		</div>
+
+</template>

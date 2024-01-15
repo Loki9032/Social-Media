@@ -1,0 +1,37 @@
+.background {
+    background-color: #f0f0f0; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px;
+    box-shadow: 0 4px 8px rgba(194, 75, 218, 0.81);
+    margin-bottom: 20px;
+}
+
+lightning-button{
+    border: none;
+}
+h1 {
+    margin-left: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+lightning-tabset{
+--slds-c-tabs-item-text-color-active : green;
+--slds-c-tabs-list-color-border: black;
+--slds-c-tabs-item-color-border-active :green;
+}
+
+.checkbox-icons-container{
+    margin-left: 7rem;
+    display: flex;
+}

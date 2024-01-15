@@ -1,0 +1,60 @@
+.onboarding-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.credentials-section {
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+   font-weight: bolder;
+    font-style: italic;
+    font-size: 20px;
+    color: rgb(70, 97, 184);
+}
+
+h2{
+    font-size:16px;
+    font-weight: bold;
+    color: rgb(205, 87, 87);
+    margin-bottom: 10px;
+}
+li{
+    list-style: circle;
+    margin-left: 15px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+b{
+    color: green;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.cred{
+    margin-top: 10px;
+}
+
+img:hover {
+    transform: scale(1.5);
+}
+.apexAccess li{
+    color: rgb(74, 194, 215);
+    margin-left: 2rem;
+    list-style: none;
+}

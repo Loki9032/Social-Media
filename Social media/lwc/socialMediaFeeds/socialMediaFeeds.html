@@ -1,0 +1,21 @@
+<template>
+
+	<div class="background">
+		<div class="slds-scrollable_y"  tabindex="0">
+			<div class="slds-text-longform">
+				<template if:true={data} for:each={data} for:item="val">
+					<div class="slds-card slds-p-top_small slds-p-bottom_small" key={val.recordId}>
+						<div class="slds-p-left_x-large slds-p-top_none slds-p-horizontal_x-large">
+							<c-post-message-with-profile page-name={val.Name} post-message={val.Post_Message__c}>
+							</c-post-message-with-profile>
+							<c-likeand-comment my-data={val}></c-likeand-comment>
+						</div>
+
+					</div>
+				</template>
+			</div>
+		</div>
+
+	</div>
+
+</template>
